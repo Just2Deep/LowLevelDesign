@@ -1,6 +1,6 @@
-from command.command import LightCommand, FanCommand
-from command.devices import Light, Fan
-from command.remote_control import RemoteControl
+from command_pattern.command import LightCommand, FanCommand
+from command_pattern.devices import Light, Fan
+from command_pattern.remote_control import RemoteControl
 
 
 def main():

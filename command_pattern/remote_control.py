@@ -1,4 +1,4 @@
-from command.command import ICommand
+from command_pattern.command import ICommand
 
 
 class RemoteControl:
