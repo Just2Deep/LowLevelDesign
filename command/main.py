@@ -1,10 +1,9 @@
-from command import LightCommand, FanCommand
-from devices import Light, Fan
-from remote_control import RemoteControl
+from command.command import LightCommand, FanCommand
+from command.devices import Light, Fan
+from command.remote_control import RemoteControl
 
 
 def main():
-
     living_room_light = Light(name="Living Room Light")
     ceiling_fan = Fan(name="Ceiling Fan")
 

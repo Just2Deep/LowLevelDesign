@@ -1,10 +1,12 @@
-from command import ICommand
+from command.command import ICommand
 
 
 class RemoteControl:
     def __init__(self):
+        from typing import Optional
+
         self.num_of_buttons = 4
-        self.buttons = [None] * self.num_of_buttons
+        self.buttons: list[Optional[ICommand]] = [None] * self.num_of_buttons
         self.buttons_pressed = [False] * self.num_of_buttons
 
     def set_command(self, button: int, command: ICommand):
@@ -18,7 +20,11 @@ class RemoteControl:
         self.buttons_pressed[button] = False
 
     def press_button(self, button: int):
-        if 0 <= button < self.num_of_buttons and self.buttons[button] is not None:
+        if (
+            0 <= button < self.num_of_buttons
+            and self.buttons[button] is not None
+            and isinstance(self.buttons[button], ICommand)
+        ):
             if not self.buttons_pressed[button]:
                 self.buttons[button].execute()
                 self.buttons_pressed[button] = True

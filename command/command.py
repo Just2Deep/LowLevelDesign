@@ -2,9 +2,10 @@
 Command Design Pattern: This module defines the command interface and concrete command classes.
 """
 
-from typing import Protocol
+from typing import Protocol, runtime_checkable
 
 
+@runtime_checkable
 class ICommand(Protocol):
     """
     Command interface that defines the execute method.
