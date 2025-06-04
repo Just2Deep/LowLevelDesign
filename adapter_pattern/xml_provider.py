@@ -1,7 +1,6 @@
 class XMLDataProvider:
-    def __init__(self, xml_data):
-        self.xml_data = xml_data
-
-    def get_data(self):
+    def get_data(self, base_data: str):
         # Simulate parsing XML data
-        return self.xml_data
+        """This method would typically parse XML data and return it in a structured format.
+        For simplicity, we will just return the base_data as is."""
+        return base_data

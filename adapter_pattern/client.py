@@ -4,20 +4,17 @@ from reports import IReport
 
 
 class Client:
-    def __init__(self, adapter: IReport):
-        self.adapter = adapter
+    def get_report(self, adapter: IReport, base_data: str = ""):
+        return adapter.get_json_data(base_data)
 
-    def get_report(self):
-        return self.adapter.get_json_data()
-
-    def run(self):
-        result = self.get_report()
+    def run(self, adapter: IReport, base_data: str = ""):
+        result = self.get_report(adapter, base_data)
         print(f"Client received: {result}")
 
 
 if __name__ == "__main__":
     xml_data = "<root><element>Value</element></root>"
-    xml_provider = XMLDataProvider(xml_data)
+    xml_provider = XMLDataProvider()
     adapter = XMLProviderAdapter(xml_provider)
-    client = Client(adapter)
-    client.run()
+    client = Client()
+    client.run(adapter, xml_data)
