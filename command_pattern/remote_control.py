@@ -1,10 +1,10 @@
+from typing import Optional
+
 from command_pattern.command import ICommand
 
 
 class RemoteControl:
     def __init__(self):
-        from typing import Optional
-
         self.num_of_buttons = 4
         self.buttons: list[Optional[ICommand]] = [None] * self.num_of_buttons
         self.buttons_pressed = [False] * self.num_of_buttons
@@ -32,4 +32,5 @@ class RemoteControl:
                 self.buttons[button].undo()
                 self.buttons_pressed[button] = False
         else:
+            raise ValueError("Unknown command")
             raise ValueError("Unknown command")

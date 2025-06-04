@@ -1,6 +1,6 @@
-from adapter import XMLProviderAdapter
-from xml_provider import XMLDataProvider
-from reports import IReport
+from adapter_pattern.adapter import XMLProviderAdapter
+from adapter_pattern.reports import IReport
+from adapter_pattern.xml_provider import XMLDataProvider
 
 
 class Client:
@@ -13,7 +13,7 @@ class Client:
 
 
 if __name__ == "__main__":
-    xml_data = "<root><element>Value</element></root>"
+    xml_data = "<root><element>Value</element><name>Test</name></root>"
     xml_provider = XMLDataProvider()
     adapter = XMLProviderAdapter(xml_provider)
     client = Client()

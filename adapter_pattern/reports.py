@@ -1,6 +1,6 @@
-from abc import ABC, abstractmethod
+from typing import Protocol, runtime_checkable
 
 
-class IReport(ABC):
-    @abstractmethod
+@runtime_checkable
+class IReport(Protocol):
     def get_json_data(self, base_data: str) -> str: ...

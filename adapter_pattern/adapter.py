@@ -1,10 +1,9 @@
 import json
 
-from xml_provider import XMLDataProvider
-from reports import IReport
+from adapter_pattern.xml_provider import XMLDataProvider
 
 
-class XMLProviderAdapter(IReport):
+class XMLProviderAdapter:
     def __init__(self, xml_provider: XMLDataProvider):
         self.xml_provider = xml_provider
 
