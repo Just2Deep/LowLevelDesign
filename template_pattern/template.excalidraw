@@ -1,0 +1,51 @@
+{
+  "type": "excalidraw",
+  "version": 2,
+  "source": "https://marketplace.visualstudio.com/items?itemName=pomdtr.excalidraw-editor",
+  "elements": [
+    {
+      "id": "PUYogkvqhwHXHE8s41R95",
+      "type": "text",
+      "x": 289,
+      "y": 136,
+      "width": 715.5594482421875,
+      "height": 300,
+      "angle": 0,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "index": "a2",
+      "roundness": null,
+      "seed": 1826696308,
+      "version": 324,
+      "versionNonce": 1103047156,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1749274685504,
+      "link": null,
+      "locked": false,
+      "text": "Template Design Pattern:\n\nhelps solve pipeline problem.\n\nwhen you want the application to do certain set of instructions prehand.\ne.g 1. load data\n    2. pre processing\n    3. train model\n    4. evaluate result\n    5. save model. \n\nall models should follow the same steps in order.",
+      "fontSize": 20,
+      "fontFamily": 5,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "containerId": null,
+      "originalText": "Template Design Pattern:\n\nhelps solve pipeline problem.\n\nwhen you want the application to do certain set of instructions prehand.\ne.g 1. load data\n    2. pre processing\n    3. train model\n    4. evaluate result\n    5. save model. \n\nall models should follow the same steps in order.",
+      "autoResize": true,
+      "lineHeight": 1.25
+    }
+  ],
+  "appState": {
+    "gridSize": 20,
+    "gridStep": 5,
+    "gridModeEnabled": false,
+    "viewBackgroundColor": "#ffffff"
+  },
+  "files": {}
+}
